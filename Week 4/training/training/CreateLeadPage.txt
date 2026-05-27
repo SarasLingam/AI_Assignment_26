@@ -1,0 +1,38 @@
+===HTML===
+
+<input type="text" class="inputBox" name="companyName" size="30" maxlength="100" id="createLeadForm_companyName">
+<input type="text" class="inputBox" name="firstName" size="30" maxlength="100" id="createLeadForm_firstName">
+<input type="text" class="inputBox" name="lastName" size="30" maxlength="100" id="createLeadForm_lastName">
+<input type="submit" class="smallSubmit" name="submitButton" value="Create Lead" fdprocessedid="at6v7" id="ext-gen540">
+
+
+===JAVA===
+
+
+package com.leaftaps.pages;
+
+import com.framework.selenium.api.design.Locators;
+import com.framework.testng.api.base.ProjectSpecificMethods;
+
+/**
+ * Page object representing the Edit Lead page.
+ * Provides methods to update lead details and submit changes.
+ * @author Auto-generated
+ */
+public class CreateLeadPage extends ProjectSpecificMethods {
+
+	
+	public CreateLeadPage firstName(String firstNameValue) {
+		clearAndType(locateElement(Locators.ID,"createLeadForm_firstName"), firstNameValue);
+		reportStep(firstNameValue +"Updated first name is entered successfully ", "pass");
+		return this;
+	}
+
+	public CreateLeadPage lastName(String lastNameValue) {
+		clearAndType(locateElement(Locators.ID,"createLeadForm_lastName"), lastNameValue);
+		reportStep(lastNameValue +"Updated first name is entered successfully ", "pass");
+		return this;
+	}
+
+
+}
